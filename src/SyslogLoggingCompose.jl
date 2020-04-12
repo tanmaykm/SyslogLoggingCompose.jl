@@ -1,7 +1,7 @@
 module SyslogLoggingCompose
 
 using SyslogLogging, LogCompose
-import LogCompose: logcompose, log_min_level, log_assumed_level
+import LogCompose: logcompose, log_min_level
 
 const sysloglck = ReentrantLock()
 function logcompose(::Type{SyslogLogging.SyslogLogger}, config::Dict{String,Any}, logger_config::Dict{String,Any})
